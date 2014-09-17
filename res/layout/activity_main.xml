@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ru.agantaev.coordinates.MainActivity$PlaceholderFragment" >
+
+    <EditText
+        android:id="@+id/editText_degrees"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="градусы с долями"
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/green_color"
+        android1:textColor="@color/green_color" />
+
+    <EditText
+        android:id="@+id/editText_degmin_deg"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText_degrees"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="гр"
+        android:inputType="number"
+        android:textColor="@color/green_color" />
+
+    <EditText
+        android:id="@+id/editText_degmin_min"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText_degmin_deg"
+        android:layout_alignBottom="@+id/editText_degmin_deg"
+        android:layout_alignRight="@+id/editText_degrees"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@+id/editText_degmin_deg"
+        android:ems="10"
+        android:hint="минуты с долями"
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/green_color"
+        android1:textColor="@color/green_color" />
+
+    <EditText
+        android:id="@+id/editText_degminsec_deg"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText_degmin_deg"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="гр"
+        android:inputType="number"
+        android:textColor="@color/green_color" />
+
+    <EditText
+        android:id="@+id/editText_degminsec_min"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText_degminsec_deg"
+        android:layout_alignLeft="@+id/editText_degmin_min"
+        android:ems="10"
+        android:hint="мин"
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/green_color"
+        android1:textColor="@color/green_color" />
+
+    <EditText
+        android:id="@+id/editText_degminsec_sec"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText_degminsec_min"
+        android:layout_alignRight="@+id/editText_degrees"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@+id/editText_degminsec_min"
+        android:ems="10"
+        android:hint="сек. с дол."
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/green_color"
+        android1:textColor="@color/green_color" />
+
+    <TextView
+        android:id="@+id/textView_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_degminsec_deg"
+        android:layout_below="@+id/editText_degminsec_deg"
+        android:layout_marginTop="20dp"
+        android:text="Исходный формат:"
+        android:textColor="@color/green_color" />
+
+    <RadioGroup
+        android1:id="@+id/radioGroup1"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android1:layout_below="@+id/textView_choice"
+        android1:layout_marginTop="13dp" >
+
+        <RadioButton
+            android1:id="@+id/radio_degrees"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:checked="false"
+            android1:onClick="radio_degrees_onClick"
+            android1:text="Градусы с долями"
+            android1:textColor="@color/green_color" />
+
+        <RadioButton
+            android1:id="@+id/radio_degmin"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:onClick="radio_degmin_onClick"
+            android1:text="Градусы + минуты с долями"
+            android1:textColor="@color/green_color" />
+
+        <RadioButton
+            android1:id="@+id/radio_degminsec"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:onClick="radio_degminsec_onClick"
+            android1:text="Градусы + минуты + секунды"
+            android1:textColor="@color/green_color" />
+
+    </RadioGroup>
+
+    <Button
+        android1:id="@+id/button_newCalculation"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_below="@+id/radioGroup1"
+        android1:layout_marginTop="13dp"
+        android:background="@drawable/buttonstyle1"
+        android1:onClick="newCalculation_onClick"
+        android1:text="Новый расчёт" />
+
+    <Button
+        android1:id="@+id/button_calculate"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignBaseline="@+id/button_newCalculation"
+        android1:layout_alignBottom="@+id/button_newCalculation"
+        android1:layout_alignRight="@+id/radioGroup1"
+        android1:background="@drawable/buttonstyle1"
+        android1:onClick="calculate_onClick"
+        android1:text="Рассчитать" />
+
+    <TextView
+        android1:id="@+id/help_textView"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android1:layout_below="@+id/button_newCalculation"
+        android1:layout_marginTop="13dp"
+        android:textColorLink="@color/green_color"
+        android1:textColor="@color/green_color"
+        android1:text="1) Выберите исходный формат. 2) Кликните кнопку &quot;Новый расчёт&quot;. 3) Введите координаты в исходном формате. 4) Кликните кнопку &quot;Рассчитать&quot;." />
+
+</RelativeLayout>

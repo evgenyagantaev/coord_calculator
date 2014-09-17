@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">coordinates</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    
+    <color name="background_color">#000000</color>
+    <color name="button_forecolor">#888888</color>
+    <color name="green_color">#00ff00</color>
+    <color name="red_color">#ff0000</color>
+
+</resources>
